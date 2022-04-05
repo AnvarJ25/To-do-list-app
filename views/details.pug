@@ -1,0 +1,8 @@
+extends layout.pug
+
+block content
+    div.container.detail
+        h1.task-title #{task.title}
+        p.task-deskription #{task.moredetails}
+        a.deleteL(href=`/${ task.id }/delete`) Done 
+        a.backL.deleteL(href='/list') Back to list of tasks

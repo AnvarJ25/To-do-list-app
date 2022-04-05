@@ -1,0 +1,15 @@
+extends layout.pug
+
+block content
+    h1.form Creating Tasks
+        if error
+            p.form.error You must have to fill Title form!
+
+    
+        form.form(action='/create', method='POST')
+            input.input(placeholder='Your Title', name='title')
+            textarea.input(name='moredetails', id='', cols='30', rows='10', placeholder='More Detail')
+            button.btn save
+            
+            button.btn.back
+                a(href='/') Back to main menue

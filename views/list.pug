@@ -1,0 +1,16 @@
+extends layout.pug
+
+block content
+    div.container
+        h1.listT List of Tasks
+
+        button.btn.back
+            a(href='/') Back to main menue
+    
+
+        each task in tasks
+            div.list-wrapper
+                a.task(href=`/list/${ task.id}`) #{task.title}
+                div.function
+                    a.delete(href=`/${ task.id }/delete`) Done 
+                    
