@@ -2,6 +2,7 @@ var express = require('express')
 var app = express()
 var path = require("path")
 var fs = require('fs')
+const port = process.env.PORT || 3000
 
 app.set("views", path.join(__dirname, "views") )
 app.set("view engine", "pug")
@@ -97,4 +98,4 @@ function id () {
     return '_' + Math.random().toString(36).substr(2, 9);
   };
 
-app.listen(3000)
+app.listen(port)
